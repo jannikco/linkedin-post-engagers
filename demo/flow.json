@@ -1,0 +1,49 @@
+{
+  "id": "engagement-qualified-leads",
+  "repositoryId": "linkedin-post-engagers",
+  "product": "leadadapter",
+  "connectorId": "linkedin",
+  "title": "Turn post engagement into a qualified review list",
+  "promise": "Identify repeated engagement with source evidence, ready for human review.",
+  "sourceRevision": "9cc156ebd0081963cf826c60de6f7a2738ec9753b9fce22a8b3f860de258fb61",
+  "credential": "LEADADAPTER_API_KEY",
+  "transport": "leadadapter-rest",
+  "sourceRefs": [
+    "https://leadadapter.com/docs/api-reference?lang=en"
+  ],
+  "readTask": {
+    "intent": "Identify repeated engagement with source evidence, ready for human review.",
+    "requiredCapability": "Read-only authorized account data; discover actual names and schemas first"
+  },
+  "synthetic": {
+    "strategy": "score",
+    "field": "engagementCount",
+    "value": 2,
+    "records": [
+      {
+        "id": "synthetic-engager-a",
+        "engagementCount": 3,
+        "postUrn": "urn:li:share:synthetic-post"
+      },
+      {
+        "id": "synthetic-engager-b",
+        "engagementCount": 1,
+        "postUrn": "urn:li:share:synthetic-post"
+      }
+    ],
+    "input": {
+      "limit": 10
+    },
+    "normalization": "Invented normalized review fields demonstrate task logic; live provider schemas and field mappings must be reviewed separately.",
+    "expectedReviewCount": 1,
+    "asOf": "2026-11-08T00:00:00Z"
+  },
+  "livePolicy": {
+    "default": "preflight-only",
+    "explicitReadSelectionRequired": true,
+    "providerWritesAllowed": false,
+    "sandboxWritesRequireSeparateApproval": true
+  },
+  "baseSourceRevision": "6aea60446ece52d7cbcb35df27cb3f8007093e142bab0dc67d2683ccb86837dc",
+  "releaseVersion": "0.2.1"
+}

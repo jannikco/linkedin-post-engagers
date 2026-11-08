@@ -5,7 +5,7 @@
   "releaseEligible": true,
   "maintainer": "jannikco",
   "license": "MIT",
-  "sourceRevision": "6aea60446ece52d7cbcb35df27cb3f8007093e142bab0dc67d2683ccb86837dc",
+  "sourceRevision": "9cc156ebd0081963cf826c60de6f7a2738ec9753b9fce22a8b3f860de258fb61",
   "evidence": [
     "Pinned public OpenAPI contract",
     "tests/leadadapter.test.mjs"
@@ -17,7 +17,7 @@
   "kind": "leadadapter-recipe",
   "product": "leadadapter",
   "title": "LinkedIn post engagers",
-  "description": "Create a governed post-engager request and inspect its queued result.",
+  "description": "Turn LinkedIn post engagement into a source-backed prospect shortlist. LeadAdapter API client, AI-agent skills and reviewed CRM handoff.",
   "operationIds": [
     "list_post_engagers_post"
   ],
@@ -25,7 +25,7 @@
   "qualityVersion": 2,
   "artifactType": "workflow",
   "utility": {
-    "problem": "Create a governed post-engager request and inspect its queued result.",
+    "problem": "Turn LinkedIn post engagement into a source-backed prospect shortlist. LeadAdapter API client, AI-agent skills and reviewed CRM handoff.",
     "output": "Authenticated LeadAdapter results, review reports and resumable research-to-CRM workflows"
   },
   "capabilityEvidence": {
@@ -54,7 +54,7 @@
     }
   },
   "agentReady": true,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "executionAuthority": "leadadapter-api",
   "factory": "leadadapter-pipmcp",
   "generatorVersion": 1

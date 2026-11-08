@@ -1,5 +1,41 @@
 # LinkedIn Post Engagers API — turn engagement into a lead workflow
 
+## Turn post engagement into a qualified review list
+
+Identify repeated engagement with source evidence, ready for human review.
+
+### Try the task with synthetic data
+
+No product key is needed for this demo. Requires Node.js 22+.
+
+```sh
+npm ci --ignore-scripts
+npm run demo
+# Optional: save a private report to a new file.
+npm run demo -- --output ./synthetic-report.json
+```
+
+Output: a task-specific JSON review report selecting 1 of 2 invented records. It includes the completed fixture receipt and a request trace; no provider request or write occurs.
+
+The synthetic records use normalized review fields. Review and map your actual provider schema before applying the same selection to live data.
+
+### Use your authorized account
+
+[Activate this task](https://leadadapter.com/github/start?integration=linkedin-post-engagers&flow=engagement-qualified-leads&utm_source=github&utm_campaign=github-linkedin-post-engagers&utm_content=task-demo), then set **LEADADAPTER_API_KEY** in your process environment. Select an authorized connected LinkedIn profile; existing scopes, caps and review requirements apply.
+
+```sh
+npm run preflight
+```
+
+Preflight checks access/discovery only; it does not count as a completed provider task. For an explicitly reviewed read, use the returned live schema and the exact operation/tool, arguments and stable idempotency key:
+
+```sh
+npm run verify:read -- --operation list_post_engagers_post --params '<reviewed request JSON>' --idempotency-key '<stable request key>' --confirm-read-only
+```
+
+The verification command performs only the selected authorized read; it refuses writes and never selects a customer operation automatically. Only a completed receipt establishes a live read. Missing access, pending jobs and uncertain outcomes remain explicit blockers. Reports contain receipt digests rather than customer payloads. No prices, trials or account allowances are changed.
+
+
 **Build a useful follow-up workflow around the people engaging with a relevant post.**
 
 Request the engagement data available to your connected LinkedIn account for a selected post. Use it to research an audience, qualify potential leads and plan appropriate follow-up inside LeadAdapter or your own application.
