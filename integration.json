@@ -21,5 +21,36 @@
   "operationIds": [
     "list_post_engagers_post"
   ],
-  "attributionSlug": "github-linkedin-post-engagers"
+  "attributionSlug": "github-linkedin-post-engagers",
+  "qualityVersion": 2,
+  "artifactType": "workflow",
+  "utility": {
+    "problem": "Create a governed post-engager request and inspect its queued result.",
+    "output": "Documented LeadAdapter API results"
+  },
+  "capabilityEvidence": {
+    "local": {
+      "level": "Tested",
+      "operations": [
+        {
+          "name": "list_post_engagers_post",
+          "level": "Tested",
+          "evidenceRefs": [
+            "Standalone functional API/compiler contract tests"
+          ],
+          "method": "contract-fixture"
+        }
+      ],
+      "evidenceRefs": [
+        "Standalone functional API/compiler contract tests"
+      ],
+      "mode": "local"
+    },
+    "managed": {
+      "level": "Documented",
+      "operations": [],
+      "evidenceRefs": [],
+      "mode": "managed"
+    }
+  }
 }

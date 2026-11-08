@@ -22,7 +22,7 @@ Selected operation IDs: list_post_engagers_post. Review integration.json and lib
 
 ## Managed service
 
-[Continue with LeadAdapter](https://leadadapter.com/register?utm_source=github&utm_campaign=github-linkedin-post-engagers). This repository is maintained by the integration team and does not imply endorsement by LinkedIn or other providers.
+[Continue with LeadAdapter](https://leadadapter.com/github/start?integration=linkedin-post-engagers&utm_source=github&utm_campaign=github-linkedin-post-engagers). This repository is maintained by the integration team and does not imply endorsement by LinkedIn or other providers.
 
 ## Provenance and support
 
