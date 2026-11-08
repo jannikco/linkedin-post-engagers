@@ -1,0 +1,6 @@
+{
+  "body": {
+    "post_urn": "example-post_urn"
+  },
+  "idempotencyKey": "example-request-001"
+}
